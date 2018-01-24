@@ -1,0 +1,8 @@
+# deps
+node_modules/
+# spa page
+develop/index.pug
+# build
+dist/
+# gitlab-ci
+.gitlab-ci.yml

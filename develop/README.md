@@ -1,0 +1,1 @@
+This folder must exist and its file `index.pug` will be created or rewritten automaticlly;
