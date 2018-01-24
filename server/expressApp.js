@@ -34,9 +34,10 @@ app.set('view engine', 'pug');
 app.use('/public', express.static(path.join(__dirname, '../public')));
 app.use(webRouter);
 
-app.use((err, req, res) => {
-  console.error(err.stack); // eslint-disable-line
+app.use((err, req, res, next) => { // eslint-disable-line
+  // next is necessary for error handle
+  console.log(err.stack);
   res.status(500).send('Something broke!');
 });
 app.listen(3000);
-console.log('This example is based on ReactSSR'); // eslint-disable-line
+console.log('This example is based on ReactSSR');
